@@ -7,7 +7,7 @@
 File: ./build/player/lottie_svg.min.js
 
 ```bash
-npm install lottie-web
+npm install lottie-web-light
 ```
 
 For complete readme how to use refer below
