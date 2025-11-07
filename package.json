@@ -1,11 +1,11 @@
 {
   "name": "@kajhard/lottie-web-light-noeval",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "removed eval usage from lottie-web",
   "main": "./build/player/lottie.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/velusgautam/lottie-web"
+    "url": "https://github.com/Kaj-Hard/lottie-web-light-noeval"
   },
   "scripts": {
     "build": "node tasks/build.js"
