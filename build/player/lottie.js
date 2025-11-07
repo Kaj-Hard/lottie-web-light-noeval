@@ -12420,12 +12420,15 @@ var ExpressionManager = (function(){
         if(data.xf) {
             var i, len = data.xf.length;
             for(i = 0; i < len; i += 1) {
-                __expression_functions[i] = eval('(function(){ return ' + data.xf[i] + '}())');
+                // Using Function constructor instead of eval for better security
+                __expression_functions[i] = new Function('return ' + data.xf[i])();
             }
         }
 
         var scoped_bm_rt;
-        var expression_function = eval('[function _expression_function(){' + val+';scoped_bm_rt=$bm_rt}' + ']')[0];
+        
+        // Using Function constructor instead of eval for better security
+        var expression_function = new Function('return ' + val + ';scoped_bm_rt=$bm_rt');
         var numKeys = property.kf ? data.k.length : 0;
 
         var active = !this.data || this.data.hd !== true;
